@@ -14,10 +14,8 @@ func TestSkiplist(t *testing.T) {
 		return 1
 	}
 
-	sl.Put(4, fn)
-	sl.Put(8, fn)
-	sl.Put(6, fn)
-	sl.Put(5, fn)
-	sl.Put(1, fn)
+	for i := 0; i < 10; i++ {
+		sl.Put(i, fn)
+	}
 	t.Log(sl)
 }
